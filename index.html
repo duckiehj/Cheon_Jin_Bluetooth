@@ -5,5 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bluetooth Speaker Project</title>
   </head>
-  <body></body>
+  <body>
+    <model-viewer
+      src="images/cj_ar_bluetooth.gltf"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      tone-mapping="neutral"
+      poster="poster.webp"
+      shadow-intensity="1"
+      camera-orbit="61.99deg 82.18deg 77.98m"
+      field-of-view="30deg"
+    >
+      <button
+        class="Hotspot"
+        slot="hotspot-1"
+        data-position="8.942735960769859m 11.205557909035843m 6.518153549317201m"
+        data-normal="0.8421089656077764m 0.4113176091605734m 0.34881272115195405m"
+        data-visibility-attribute="visible"
+      ></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-2"
+        data-position="7.194698656891673m 3.8120751658590812m 7.886261566696299m"
+        data-normal="0.5548810738083129m -0.4113175843084672m 0.7231354221499461m"
+        data-visibility-attribute="visible"
+      ></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-4"
+        data-position="10.679351571272264m -3.057023246685743m 2.995864305958605m"
+        data-normal="0.9195985647001882m 0.38942844607067056m -0.05180699945313338m"
+        data-visibility-attribute="visible"
+      ></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-6"
+        data-position="1.8659672482538472m -3.7126517100141374m -5.0504790104679955m"
+        data-normal="-0.10728781900865593m 0.14911570577515063m -0.9829821108156265m"
+        data-visibility-attribute="visible"
+      ></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-7"
+        data-position="2.809401793644338m 19.826641685246784m -1.3010287950299206m"
+        data-normal="0.9064091360236086m 0.1850658542331103m 0.3797013401739644m"
+        data-visibility-attribute="visible"
+      ></button>
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">View in your space</button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+      </div>
+    </model-viewer>
+  </body>
 </html>
