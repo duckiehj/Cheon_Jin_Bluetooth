@@ -142,7 +142,7 @@ model-viewer::part(default-progress-mask) {
 
 @media screen and (min-width: 768px) {
   model-viewer {
-    height: 700px;
+    height: 600px;
   }
   .Hotspot {
     display: block;
