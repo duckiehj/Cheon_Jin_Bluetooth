@@ -1,5 +1,7 @@
+@use "../abstracts/" as *;
+
 body {
-  font-family: "Comfortaa", sans-serif;
+  font-family: $primary-font;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -8,6 +10,11 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Comfortaa", sans-serif;
+  font-family: $primary-font;
   font-weight: 700;
+}
+
+p {
+  font-family: $primary-font;
+  font-weight: 400;
 }

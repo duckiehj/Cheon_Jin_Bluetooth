@@ -1,6 +1,8 @@
 (() => {
   //variables
   const hotspots = document.querySelectorAll(".Hotspot");
+  const mobileList = document.querySelector("#mobile-feature-list");
+
   const infoBoxes = [
     {
       title: "Bright LED Light",
@@ -47,6 +49,25 @@
       selected.appendChild(imageElement);
       selected.appendChild(titleElement);
       selected.appendChild(textElement);
+
+      const mobileCard = document.createElement("div");
+      mobileCard.classList.add("mobile-feature-card");
+
+      const mobileCard = document.createElement("img");
+      mobileImg.src = infoBox.image;
+      mobileImg.alt = infoBox.title;
+
+      const mobileTitle = document.createElement("h2");
+      mobileTitle.textContent = infoBox.title;
+
+      const mobileText = document.createElement("p");
+      mobileTitle.textContent = infoBox.title;
+
+      mobileCard.appendChild(mobileImg);
+      mobileCard.appendChild(mobileTitle);
+      mobileCard.appendChild(mobileText);
+
+      mobileList.appendChild(mobileCard);
     });
   }
 
