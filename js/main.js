@@ -53,7 +53,7 @@
       const mobileCard = document.createElement("div");
       mobileCard.classList.add("mobile-feature-card");
 
-      const mobileCard = document.createElement("img");
+      const mobileImg = document.createElement("img");
       mobileImg.src = infoBox.image;
       mobileImg.alt = infoBox.title;
 
@@ -61,7 +61,7 @@
       mobileTitle.textContent = infoBox.title;
 
       const mobileText = document.createElement("p");
-      mobileTitle.textContent = infoBox.title;
+      mobileTitle.textContent = infoBox.text;
 
       mobileCard.appendChild(mobileImg);
       mobileCard.appendChild(mobileTitle);
