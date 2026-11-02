@@ -35,7 +35,7 @@ model-viewer {
   border-radius: 50%;
   width: 42px;
   height: 42px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .Hotspot:not([data-visible]) {
@@ -45,7 +45,11 @@ model-viewer {
   pointer-events: none;
 }
 
-.Hotspot:focus,
+.Hotspot:focus {
+  border: none;
+  outline: none;
+}
+
 .Hotspot:hover {
   border: none;
   outline: none;
@@ -74,6 +78,10 @@ model-viewer {
   position: absolute;
   top: -400%;
   text-align: left;
+}
+
+#hotspot-5 {
+  top: 0;
 }
 
 .Hotspot:hover .HotspotAnnotation {

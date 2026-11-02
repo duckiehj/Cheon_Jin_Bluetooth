@@ -61,7 +61,7 @@
       mobileTitle.textContent = infoBox.title;
 
       const mobileText = document.createElement("p");
-      mobileTitle.textContent = infoBox.text;
+      mobileText.textContent = infoBox.text;
 
       mobileCard.appendChild(mobileImg);
       mobileCard.appendChild(mobileTitle);
