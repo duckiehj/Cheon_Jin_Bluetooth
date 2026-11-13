@@ -27,26 +27,35 @@
         </label>
 
         <ul id="burger-menu">
-          <li><a href="#hero-section">Home</a></li>
-          <li><a href="#vertical_animation">Animation</a></li>
-          <li><a href="#xray_slider">Slider</a></li>
+          <li><a href="#hero-vertical">Home</a></li>
+          <li><a href="#image-revealer">Slider</a></li>
           <li><a href="#3dmodel">3D Model Viewer</a></li>
           <li><a href="#promotion">Promotional Gallery</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="hero-section" class="grid-con center-grid-con box">
-        <h2>Bluetooth Speaker Project Hero Section</h2>
-      </section>
+      <div class="grid-con">
+        <div class="col-span-full"> 
+          <div id="hero-slider" class="grid-con center-grid-con box">
+            <h2>Hero Vertical</h2>
+          </div>
+        </div>
 
-      <section id="vertical" class="grid-con center-grid-con box">
-        <h2>Vertical Animation</h2>
-      </section>
 
-      <section id="xray_slider" class="grid-con center-grid-con box">
-        <h2>Slider</h2>
-      </section>
+
+        <div class="col-span-full">
+          <div id="comparison_con">
+            <h2>Image Revealer</h2>
+            <div id="daynight">
+              <div id="divisor"></div>
+              <input type="range" min="0" max="100" step=".2" value="50" id="slider">
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>  
 
       <div class="grid-con center-grid-con">
         <section class="col-span-full">
