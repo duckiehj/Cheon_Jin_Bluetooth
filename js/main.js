@@ -1,5 +1,57 @@
 (() => {
-  //variables
+  // hero-vertical
+  const canvas = document.querySelector("#explode-view");
+  const context = canvas.getContext("2d");
+
+  canvas.width = 1280;
+  canvas.height = 720;
+
+  const frameCount = 450;
+  const images = [];
+
+  const speaker = {
+    frame: 0,
+  };
+
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = `images/speaker450f/01_${(i + 1).toString().padStart(4, "0")}.png`;
+    images.push(img);
+  }
+
+  gsap.to(speaker, {
+    frame: frameCount - 1,
+    ease: "none",
+    snap: "frame",
+    scrollTrigger: {
+      trigger: "#hero-vertical",
+      pin: true,
+      start: "top top",
+      markers: true,
+      scrub: 1,
+    },
+    onUpdate: render,
+  });
+
+  gsap.to(".hero-title", {
+    opacity: 0,
+    y: -30,
+    scrollTrigger: {
+      trigger: "#hero-vertical",
+      start: "top top",
+      end: "30% top",
+      scrub: 1,
+    },
+  });
+
+  images[0].addEventListener("load", render);
+
+  function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[speaker.frame], 0, 0);
+  }
+
+  //ar-model Section
   const hotspots = document.querySelectorAll(".Hotspot");
   const mobileList = document.querySelector("#mobile-feature-list");
 

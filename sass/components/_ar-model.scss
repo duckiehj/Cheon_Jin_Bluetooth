@@ -9,9 +9,23 @@ model-viewer {
   margin-bottom: 30px;
 }
 
+@keyframes ufoSwing {
+  0%,
+  100% {
+    background-position: 50% center;
+  }
+  25% {
+    background-position: 20% center;
+  }
+  75% {
+    background-position: 80% center;
+  }
+}
+
 .Hotspot {
   display: none;
   background: url(../images/icon.svg) center no-repeat;
+  background-size: 38px 38px;
   border: 0;
   cursor: pointer;
   border-radius: 50%;
@@ -37,6 +51,7 @@ model-viewer {
   outline: none;
   height: 42px;
   width: 42px;
+  animation: ufoSwing 0.8s infinite ease-in-out;
   box-shadow:
     0 0 10px $primary-color,
     0 0 20px rgba(18, 79, 88, 0.7),
@@ -128,9 +143,6 @@ model-viewer {
   }
 }
 
-/* Progress */
-// Customize the progress bar
-//The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 model-viewer::part(default-progress-bar) {
   height: 20px;
   background-color: $accent-color;
