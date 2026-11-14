@@ -1,9 +1,140 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Bluetooth Speaker Project</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bluetooth Speaker Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <h1 class="visually-hidden">Bluetooth Speaker Project</h1>
+    <header class="grid-con center-grid-con">
+      <nav
+        id="main-nav"
+        class="col-span-2 m-col-start-4 m-col-end-13 l-col-start-5 l-col-end-13"
+      >
+        <h2 class="visually-hidden">Main Navigation</h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="burger-icon">
+          <img src="images/icon_burger.svg" alt="Hamburger Menu" />
+        </label>
+
+        <ul id="burger-menu">
+          <li><a href="#hero-vertical">Home</a></li>
+          <li><a href="#image-revealer">Revealer</a></li>
+          <li><a href="#3dmodel">3D Model Viewer</a></li>
+          <li><a href="#promotion">Promotional Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="grid-con">
+        <div class="col-span-full">
+          <div id="hero-vertical">
+            <div class="hero-title">
+              <h2>SOUND MEETS LIGHT</h2>
+              <p>Scroll down to explore inside</p>
+            </div>
+            <canvas id="explode-view"></canvas>
+          </div>
+        </div>
+
+        <div class="col-span-full">
+          <div id="image-revealer">
+            <h2>Image Revealer</h2>
+            <div id="daynight">
+              <div id="divisor"></div>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step=".2"
+                value="50"
+                id="slider"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-con center-grid-con">
+        <section class="col-span-full">
+          <model-viewer
+            src="model/cj_ar_bluetooth.gltf"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            tone-mapping="neutral"
+            poster="images/poster.png"
+            shadow-intensity="1"
+            camera-orbit="61.99deg 82.18deg 77.98m"
+            field-of-view="30deg"
+          >
+            <button
+              class="Hotspot"
+              slot="hotspot-1"
+              data-position="8.942735960769859m 11.205557909035843m 6.518153549317201m"
+              data-normal="0.8421089656077764m 0.4113176091605734m 0.34881272115195405m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-1"></div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-2"
+              data-position="7.194698656891673m 3.8120751658590812m 7.886261566696299m"
+              data-normal="0.5548810738083129m -0.4113175843084672m 0.7231354221499461m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-2"></div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-3"
+              data-position="10.679351571272264m -3.057023246685743m 2.995864305958605m"
+              data-normal="0.9195985647001882m 0.38942844607067056m -0.05180699945313338m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-3"></div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-4"
+              data-position="1.8659672482538472m -3.7126517100141374m -5.0504790104679955m"
+              data-normal="-0.10728781900865593m 0.14911570577515063m -0.9829821108156265m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-4"></div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-5"
+              data-position="2.809401793644338m 19.826641685246784m -1.3010287950299206m"
+              data-normal="0.9064091360236086m 0.1850658542331103m 0.3797013401739644m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-5"></div>
+            </button>
+          </model-viewer>
+          <div id="mobile-feature-list"></div>
+        </section>
+      </div>
+      <script
+        type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"
+      ></script>
+    </main>
+    <footer class="grid-con center-grid-con box">
+      <p class="col-span-full">
+        &copy; 2026 - Bluetooth Speaker Project. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
