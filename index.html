@@ -28,7 +28,7 @@
 
         <ul id="burger-menu">
           <li><a href="#hero-vertical">Home</a></li>
-          <li><a href="#image-revealer">Slider</a></li>
+          <li><a href="#image-revealer">Revealer</a></li>
           <li><a href="#3dmodel">3D Model Viewer</a></li>
           <li><a href="#promotion">Promotional Gallery</a></li>
         </ul>
@@ -36,26 +36,33 @@
     </header>
     <main>
       <div class="grid-con">
-        <div class="col-span-full"> 
-          <div id="hero-slider" class="grid-con center-grid-con box">
-            <h2>Hero Vertical</h2>
+        <div class="col-span-full">
+          <div id="hero-vertical">
+            <div class="hero-title">
+              <h2>SOUND MEETS LIGHT</h2>
+              <p>Scroll down to explore inside</p>
+            </div>
+            <canvas id="explode-view" width="1280" height="720"></canvas>
           </div>
         </div>
 
-
-
         <div class="col-span-full">
-          <div id="comparison_con">
+          <div id="image-revealer">
             <h2>Image Revealer</h2>
             <div id="daynight">
               <div id="divisor"></div>
-              <input type="range" min="0" max="100" step=".2" value="50" id="slider">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step=".2"
+                value="50"
+                id="slider"
+              />
             </div>
           </div>
-          
-          </div>
         </div>
-      </div>  
+      </div>
 
       <div class="grid-con center-grid-con">
         <section class="col-span-full">
@@ -126,6 +133,8 @@
       </p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
