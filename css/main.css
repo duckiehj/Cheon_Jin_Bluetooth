@@ -211,4 +211,150 @@ model-viewer::part(default-progress-mask) {
   .hero-title p {
     font-size: 20px;
   }
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #fff;
+}
+
+#main-nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#menu-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.burger-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.burger-lines {
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #1a535c;
+  transition: background-color 0.3s ease;
+}
+.burger-lines::before, .burger-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1a535c;
+  transition: top 0.3s ease, transform 0.3s ease;
+}
+.burger-lines::before {
+  top: -8px;
+}
+.burger-lines::after {
+  top: 8px;
+}
+
+#menu-toggle:checked + .burger-icon .burger-lines {
+  background-color: transparent;
+}
+#menu-toggle:checked + .burger-icon .burger-lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+#menu-toggle:checked + .burger-icon .burger-lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#menu-toggle:focus-visible + .burger-icon {
+  outline: 2px solid #1a535c;
+  outline-offset: 4px;
+}
+
+#burger-menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  max-width: 85vw;
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+  background-color: #fff;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease, visibility 0s linear 0.3s;
+}
+#burger-menu li a {
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1a535c;
+  transition: color 0.2s ease;
+}
+#burger-menu li a:hover, #burger-menu li a:focus-visible {
+  color: #2ec4b6;
+}
+
+#menu-toggle:checked ~ #burger-menu {
+  max-height: 350px;
+  padding: 12px 20px 18px;
+  visibility: visible;
+  border-bottom: 4px solid #1a535c;
+  transition: max-height 0.3s ease, padding 0.3s ease, visibility 0s;
+}
+
+@media screen and (min-width: 768px) {
+  #menu-toggle,
+  .burger-icon {
+    display: none;
+  }
+  #burger-menu,
+  #menu-toggle:checked ~ #burger-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    overflow: visible;
+    visibility: visible;
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    transition: none;
+  }
+  #burger-menu li a {
+    padding: 0;
+    white-space: nowrap;
+  }
 }/*# sourceMappingURL=main.css.map */
