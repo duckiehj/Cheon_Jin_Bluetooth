@@ -176,7 +176,7 @@ model-viewer::part(default-progress-mask) {
 #hero-vertical {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,11 +205,24 @@ model-viewer::part(default-progress-mask) {
 }
 
 @media screen and (min-width: 768px) {
+  #hero-vertical {
+    height: 100vh;
+  }
   .hero-title h2 {
     font-size: 48px;
   }
   .hero-title p {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero-title,
+  #explode-view {
+    translate: 0 -100px;
+  }
+  body:has(#menu-toggle:checked) .hero-title,
+  body:has(#menu-toggle:checked) #explode-view {
+    translate: 0 0;
   }
 }
 header {
