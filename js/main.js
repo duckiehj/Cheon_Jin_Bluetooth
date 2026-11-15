@@ -2,7 +2,7 @@
   // I was so confused by all the Javascript so I added comments to each function to help myself.
 
   // burger menu JS
-  console.log("JS is connected");
+  // console.log("JS is connected");
 
   const menu = document.querySelector("#menu-toggle");
   const links = document.querySelectorAll("#burger-menu a");
@@ -67,7 +67,6 @@
   }
 
   //ar-model Section
-  const hotspots = document.querySelectorAll(".Hotspot");
   const mobileList = document.querySelector("#mobile-feature-list");
 
   const infoBoxes = [
