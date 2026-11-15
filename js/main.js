@@ -41,8 +41,9 @@
       trigger: "#hero-vertical",
       pin: true,
       start: "top top",
+      end: "+=3000",
       markers: true,
-      scrub: 1,
+      scrub: true,
     },
     onUpdate: render,
   });
@@ -53,8 +54,8 @@
     scrollTrigger: {
       trigger: "#hero-vertical",
       start: "top top",
-      end: "30% top",
-      scrub: 1,
+      end: "+=600",
+      scrub: true,
     },
   });
 
