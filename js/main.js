@@ -1,4 +1,18 @@
 (() => {
+  // I was so confused by all the Javascript so I added comments to each function to help myself.
+
+  // burger menu JS
+  console.log("JS is connected");
+
+  const menu = document.querySelector("#menu-toggle");
+  const links = document.querySelectorAll("#burger-menu a");
+
+  links.forEach(function (link) {
+    link.onclick = function () {
+      menu.checked = false;
+    };
+  });
+
   // hero-vertical
   const canvas = document.querySelector("#explode-view");
   const context = canvas.getContext("2d");

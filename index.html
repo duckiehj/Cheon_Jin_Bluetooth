@@ -16,14 +16,11 @@
   <body>
     <h1 class="visually-hidden">Bluetooth Speaker Project</h1>
     <header class="grid-con center-grid-con">
-      <nav
-        id="main-nav"
-        class="col-span-2 m-col-start-4 m-col-end-13 l-col-start-5 l-col-end-13"
-      >
+      <nav id="main-nav" class="col-span-full">
         <h2 class="visually-hidden">Main Navigation</h2>
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="burger-icon">
-          <img src="images/icon_burger.svg" alt="Hamburger Menu" />
+          <span class="burger-lines"></span>
         </label>
 
         <ul id="burger-menu">
@@ -65,7 +62,7 @@
       </div>
 
       <div class="grid-con center-grid-con">
-        <section class="col-span-full">
+        <section id="3dmodel" class="col-span-full">
           <model-viewer
             src="model/cj_ar_bluetooth.gltf"
             ar
@@ -76,6 +73,7 @@
             shadow-intensity="1"
             camera-orbit="61.99deg 82.18deg 77.98m"
             field-of-view="30deg"
+            alt="Interactive 3D model of a bluetooth speaker and lamp"
           >
             <button
               class="Hotspot"
@@ -126,6 +124,10 @@
         type="module"
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"
       ></script>
+
+      <section id="promotion" class="col-span-full">
+        <h2>Promitional Gallery</h2>
+      </section>
     </main>
     <footer class="grid-con center-grid-con box">
       <p class="col-span-full">
