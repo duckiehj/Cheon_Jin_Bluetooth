@@ -36,41 +36,41 @@
         </nav>
       </div>
     </header>
+
     <main>
       <div class="grid-con center-grid-con">
-        <div class="col-span-full">
-          <div id="hero-vertical">
-            <div class="hero-title">
-              <h2>SOUND MEETS LIGHT</h2>
-              <p>Scroll down to explore inside</p>
-            </div>
-            <canvas id="explode-view"></canvas>
+        <section id="hero-vertical" class="col-span-full">
+          <div class="hero-title">
+            <h2>SOUND MEETS LIGHT</h2>
+            <p>Scroll down to explore inside</p>
           </div>
-        </div>
+          <canvas id="explode-view"></canvas>
+        </section>
 
-        <div class="col-span-full">
+        <section id="image-revealer" class="col-span-full">
           <h2 class="visually-hidden">Image Revealer</h2>
-          <div id="image-revealer">
-            <h3>Play the Future, Light the Wild</h3>
-            <p>A perfect harmony of bold sound and glowing night.</p>
+          <h3>Play the Future, Light the Wild</h3>
+          <p>A perfect harmony of bold sound and glowing night.</p>
 
-            <div id="daynight">
-              <div id="divisor"></div>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                step=".2"
-                value="50"
-                id="slider"
-              />
-            </div>
+          <div id="daynight">
+            <div id="divisor"></div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              step=".2"
+              value="50"
+              id="slider"
+            />
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div class="grid-con center-grid-con">
         <section id="3dmodel" class="col-span-full">
+          <h2 class="visually-hidden">3D Model Viewer</h2>
+          <h3>Interactive 360° Features</h3>
+          <p>
+            Rotate the speaker and hover over each icon to explore every detail.
+          </p>
           <model-viewer
             src="model/cj_ar_bluetooth.gltf"
             ar
@@ -127,16 +127,12 @@
           </model-viewer>
           <div id="mobile-feature-list"></div>
         </section>
-      </div>
-      <script
-        type="module"
-        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"
-      ></script>
 
-      <section id="promotion" class="col-span-full">
-        <h2>Promitional Gallery</h2>
-        <!-- https://codemyui.com/bay-window-style-image-slider-with-scroll-effect/ -->
-      </section>
+        <section id="promotion" class="col-span-full">
+          <h2>Promotional Gallery</h2>
+          <!-- https://codemyui.com/bay-window-style-image-slider-with-scroll-effect/ -->
+        </section>
+      </div>
     </main>
     <footer class="grid-con center-grid-con box">
       <p class="col-span-full">
@@ -146,6 +142,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"
+    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>
