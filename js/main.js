@@ -1,7 +1,7 @@
 (() => {
   // I was so confused by all the Javascript so I added comments to each function to help myself.
 
-  // burger menu JS
+  // burger menu Section
   // console.log("JS is connected");
 
   const menu = document.querySelector("#menu-toggle");
@@ -13,7 +13,9 @@
     };
   });
 
-  // hero-vertical
+  //
+  //
+  // hero-vertical Section
   const canvas = document.querySelector("#explode-view");
   const context = canvas.getContext("2d");
 
@@ -65,6 +67,21 @@
     context.drawImage(images[speaker.frame], 0, 0);
   }
 
+  //
+  //
+  // Revelaer Section
+
+  const divisor = document.querySelector("#divisor");
+  const slider = document.querySelector("#slider");
+
+  function moveDivisor() {
+    divisor.style.width = `${slider.value}%`;
+  }
+
+  slider.addEventListener("input", moveDivisor);
+
+  //
+  //
   //ar-model Section
   const mobileList = document.querySelector("#mobile-feature-list");
 
@@ -95,8 +112,6 @@
       image: "images/handle.jpg",
     },
   ];
-
-  //functions
 
   function loadInfo() {
     infoBoxes.forEach((infoBox, index) => {
