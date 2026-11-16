@@ -40,6 +40,7 @@ header {
   height: 1px;
   margin: -1px;
   padding: 0;
+  border: 0;
   overflow: hidden;
   clip-path: inset(50%);
 }
@@ -122,6 +123,7 @@ header {
   font-size: 16px;
   text-align: left;
   max-height: 0;
+  border-bottom: 0 solid rgba(abstracts.$primary-color);
   overflow: hidden;
   visibility: hidden;
   transition:
@@ -136,7 +138,6 @@ header {
     text-decoration: none;
     font-weight: 800;
     color: abstracts.$primary-color;
-    border-radius: 8px;
     transition: color 0.3s ease;
 
     &::after {
@@ -178,8 +179,8 @@ header {
 
 @media screen and (min-width: 768px) {
   .nav-logo img {
-    height: auto;
     width: 120px;
+    height: auto;
   }
 
   #menu-toggle,
@@ -208,7 +209,7 @@ header {
   }
 
   #burger-menu li a {
-    padding: 0;
+    padding: 6px 0;
     white-space: nowrap;
   }
 }
