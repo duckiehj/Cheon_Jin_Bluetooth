@@ -29,7 +29,7 @@
 
   for (let i = 0; i < frameCount; i++) {
     const img = new Image();
-    img.src = `images/speaker450f/01_${(i + 1).toString().padStart(4, "0")}.png`;
+    img.src = `images/webp_450f/01_${(i + 1).toString().padStart(4, "0")}.webp`;
     images.push(img);
   }
 
@@ -42,7 +42,6 @@
       pin: true,
       start: "top top",
       end: "+=3000",
-      markers: true,
       scrub: true,
     },
     onUpdate: render,

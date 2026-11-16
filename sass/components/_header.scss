@@ -29,8 +29,8 @@ header {
 
   img {
     display: block;
-    width: auto;
-    height: 60px;
+    width: 90px;
+    height: auto;
   }
 }
 
@@ -123,7 +123,6 @@ header {
   font-size: 16px;
   text-align: left;
   max-height: 0;
-  border-bottom: 0 solid rgba(abstracts.$primary-color);
   overflow: hidden;
   visibility: hidden;
   transition:
@@ -136,7 +135,7 @@ header {
     padding: 12px 0;
     position: relative;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
     color: abstracts.$primary-color;
     transition: color 0.3s ease;
 
@@ -180,7 +179,6 @@ header {
 @media screen and (min-width: 768px) {
   .nav-logo img {
     width: 120px;
-    height: auto;
   }
 
   #menu-toggle,
