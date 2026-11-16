@@ -420,4 +420,57 @@ header .grid-con {
   100% {
     box-shadow: 0 0 0 1em transparent;
   }
+}
+#daynight {
+  position: relative;
+  aspect-ratio: 16/9;
+  background-image: url(../images/bluetooth_comp_night.jpg);
+  background-size: cover;
+  border-radius: 20%;
+}
+
+#divisor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 16/9;
+  background-image: url(../images/bluetooth_comp_day.jpg);
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  border-radius: 5%;
+}
+#divisor::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+}
+
+input[type=range] {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #2ec4b6;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #1ee242;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
