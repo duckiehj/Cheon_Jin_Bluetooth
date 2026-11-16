@@ -1,5 +1,9 @@
 @use "../abstracts" as a;
 
+#image-revealer {
+  margin: 20px 0 30px 0;
+}
+
 #daynight {
   position: relative;
   aspect-ratio: 16/9;
@@ -11,7 +15,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  aspect-ratio: 16/9;
   background-image: url(../images/bluetooth_comp_day.jpg);
   background-size: cover;
   width: 50%;
@@ -20,7 +23,7 @@
   &::after {
     content: "";
     position: absolute;
-    right: 0px;
+    right: -2px;
     width: 4px;
     height: 100%;
     background-color: #fff;
@@ -31,29 +34,30 @@ input[type="range"] {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: calc(100% +20px);
-  left: -15px;
+  width: calc(100% + 42px);
+  left: -22px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background: transparent;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
-  background: a.$accent-color;
-  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background: url(../images/icon.svg) center no-repeat;
+  background-size: contain;
   border: none;
   cursor: pointer;
 }
 
 input[type="range"]::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: #1ee242;
-  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background: url(../images/icon.svg) center no-repeat;
+  background-size: contain;
   border: none;
   cursor: pointer;
 }
