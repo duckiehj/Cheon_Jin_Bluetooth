@@ -244,6 +244,17 @@ header .grid-con {
   align-items: center;
 }
 
+.nav-logo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  display: block;
+  width: auto;
+  height: 60px;
+}
+
 #menu-toggle {
   position: absolute;
   width: 1px;
@@ -283,10 +294,10 @@ header .grid-con {
   transition: top 0.3s ease, transform 0.3s ease;
 }
 .burger-lines::before {
-  top: -7.7px;
+  top: -8px;
 }
 .burger-lines::after {
-  top: 8.3px;
+  top: 8px;
 }
 
 #menu-toggle:checked + .burger-icon .burger-lines {
@@ -327,7 +338,7 @@ header .grid-con {
   transition: max-height 0.3s ease, padding 0.3s ease, visibility 0s linear 0.3s;
 }
 #burger-menu li a {
-  display: block;
+  display: inline-block;
   padding: 12px 0;
   position: relative;
   text-decoration: none;
@@ -341,7 +352,7 @@ header .grid-con {
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: -0.25em;
+  bottom: 0;
   left: 50%;
   background-color: #2ec4b6;
   border-radius: 8px;
@@ -365,18 +376,11 @@ header .grid-con {
   transition: max-height 0.3s ease, padding 0.3s ease, visibility 0s;
 }
 
-@media screen and (max-width: 767px) {
-  #burger-menu li a {
-    display: inline-block;
-  }
-  #burger-menu li a::after {
-    bottom: 0;
-  }
-  #burger-menu li a:hover::after, #burger-menu li a:focus-visible::after {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 768px) {
+  .nav-logo img {
+    height: auto;
+    width: 120px;
+  }
   #menu-toggle,
   .burger-icon {
     display: none;
