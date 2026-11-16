@@ -9,8 +9,34 @@ h1,
 h2,
 h3 {
   font-weight: 700;
+  color: $primary-color;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 22px;
 }
 
 p {
   color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 31px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 }

@@ -78,7 +78,13 @@
     divisor.style.width = `${slider.value}%`;
   }
 
+  function resetSlider() {
+    slider.value = "50";
+    moveDivisor();
+  }
+
   slider.addEventListener("input", moveDivisor);
+  window.addEventListener("load", resetSlider);
 
   //
   //
