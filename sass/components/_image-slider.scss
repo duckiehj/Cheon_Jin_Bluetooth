@@ -1,78 +1,99 @@
 @use "../abstracts/" as *;
 
 #promotion {
-  .stage {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .carousel {
     width: 100%;
-    height: 360px;
-    padding: 0 10%;
-    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+  .carousel__viewport {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     overflow-x: auto;
-    overflow-y: hidden;
-    background: #000;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    scroll-padding-inline: 10%;
     scrollbar-width: none;
+    background-color: #111;
 
     &::-webkit-scrollbar {
       display: none;
     }
   }
 
-  .container,
-  .ring {
-    display: contents;
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
   }
 
-  .img {
-    flex: 0 0 100%;
-    height: 280px;
-    background-size: cover;
-    background-position: center;
-    scroll-snap-align: center;
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  .carousel__prev {
+    left: 10px;
+  }
+
+  .carousel__next {
+    right: 10px;
+  }
+
+  .carousel__navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    a {
+      width: 10px;
+      height: 10px;
+      background-color: #999;
+      border-radius: 50%;
+      display: block;
+
+      &:hover {
+        background-color: #ff6600;
+      }
+    }
   }
 
   @media screen and (min-width: 768px) {
-    .stage {
-      display: block;
-      position: relative;
+    .carousel__slide {
       height: 550px;
-      padding: 0;
-      overflow: hidden;
-      scroll-snap-type: none;
-      user-select: none;
-      cursor: grab;
-      touch-action: none;
-
-      &:active {
-        cursor: grabbing;
-      }
     }
 
-    .container {
-      display: block;
-      position: absolute;
-      width: 300px;
-      height: 400px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      perspective: 2000px;
-    }
-
-    .ring,
-    .img {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-    }
-
-    .img {
-      backface-visibility: hidden;
+    .carousel__prev,
+    .carousel__next {
+      width: 50px;
+      height: 50px;
+      font-size: 36px;
     }
   }
 }
