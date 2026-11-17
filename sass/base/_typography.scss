@@ -1,8 +1,10 @@
-@use "../abstracts/" as *;
+@use "../abstracts" as *;
 
 body {
   font-family: $primary-font;
   font-weight: 400;
+  background-color: $bg-color;
+  color: $text-color;
 }
 
 h1,
@@ -22,9 +24,22 @@ h3 {
 }
 
 p {
-  color: #333;
+  color: $text-color;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 35px;
+
+  .section-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: $secondary-color;
+    margin-bottom: 8px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -38,5 +53,9 @@ p {
 
   p {
     font-size: 20px;
+  }
+
+  .section-header {
+    margin-bottom: 45px;
   }
 }

@@ -1,12 +1,12 @@
-@use "../abstracts/" as *;
+@use "../abstracts" as *;
 
 model-viewer {
-  width: auto;
+  width: 100%;
   max-width: 1200px;
   height: 400px;
-  background-color: #fff;
+  background-color: $bg-color;
   margin: 0 auto;
-  margin-bottom: 30px;
+  border-radius: 10px;
 }
 
 @keyframes ufoSwing {
@@ -63,9 +63,10 @@ model-viewer {
   visibility: hidden;
   transition: all 0.5s ease-in-out;
   background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  color: rgba(0, 0, 0, 0.8);
+  border: 2px solid $primary-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  color: $text-color;
   display: block;
   font-family: $primary-font;
   font-size: 15px;
@@ -78,6 +79,26 @@ model-viewer {
   position: absolute;
   top: -400%;
   text-align: left;
+
+  p {
+    color: $text-color;
+    line-height: 20px;
+  }
+
+  h2 {
+    color: $primary-color;
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: block;
+  }
 }
 
 #hotspot-5 {
@@ -89,37 +110,18 @@ model-viewer {
   visibility: visible;
 }
 
-.HotspotAnnotation p {
-  color: #333;
-  line-height: 20px;
-}
-
-.HotspotAnnotation h2 {
-  color: $primary-color;
-  font-size: 18px;
-  margin-bottom: 7px;
-}
-
-.HotspotAnnotation img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  display: block;
-}
-
 #mobile-feature-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 10px;
+  margin-top: 25px;
 }
 
 .mobile-feature-card {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border: 2px solid $primary-color;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 16px;
   text-align: left;
 
@@ -132,6 +134,7 @@ model-viewer {
   }
 
   h2 {
+    font-size: 20px;
     margin-bottom: 8px;
     color: $primary-color;
   }
