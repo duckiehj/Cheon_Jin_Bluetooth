@@ -505,71 +505,87 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
 }
 
-#promotion .stage {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+#promotion .carousel {
   width: 100%;
-  height: 360px;
-  padding: 0 10%;
-  box-sizing: border-box;
-  overflow-x: auto;
-  overflow-y: hidden;
-  background: #000;
-  scroll-snap-type: x mandatory;
-  scroll-padding-inline: 10%;
-  scrollbar-width: none;
+  margin-top: 20px;
 }
-#promotion .stage::-webkit-scrollbar {
+#promotion .carousel__viewport {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  background-color: #111;
+}
+#promotion .carousel__viewport::-webkit-scrollbar {
   display: none;
 }
-#promotion .container,
-#promotion .ring {
-  display: contents;
-}
-#promotion .img {
+#promotion .carousel__slide {
+  position: relative;
   flex: 0 0 100%;
-  height: 280px;
-  background-size: cover;
-  background-position: center;
-  scroll-snap-align: center;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+#promotion .carousel__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+#promotion .carousel__prev,
+#promotion .carousel__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+#promotion .carousel__prev {
+  left: 10px;
+}
+#promotion .carousel__next {
+  right: 10px;
+}
+#promotion .carousel__navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+#promotion .carousel__navigation a {
+  width: 10px;
+  height: 10px;
+  background-color: #999;
+  border-radius: 50%;
+  display: block;
+}
+#promotion .carousel__navigation a:hover {
+  background-color: #ff6600;
 }
 @media screen and (min-width: 768px) {
-  #promotion .stage {
-    display: block;
-    position: relative;
+  #promotion .carousel__slide {
     height: 550px;
-    padding: 0;
-    overflow: hidden;
-    scroll-snap-type: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-    cursor: grab;
-    touch-action: none;
   }
-  #promotion .stage:active {
-    cursor: grabbing;
-  }
-  #promotion .container {
-    display: block;
-    position: absolute;
-    width: 300px;
-    height: 400px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    perspective: 2000px;
-  }
-  #promotion .ring,
-  #promotion .img {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-  }
-  #promotion .img {
-    backface-visibility: hidden;
+  #promotion .carousel__prev,
+  #promotion .carousel__next {
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
   }
 }/*# sourceMappingURL=main.css.map */
