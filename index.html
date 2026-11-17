@@ -128,25 +128,137 @@
           <div id="mobile-feature-list"></div>
         </section>
 
+        <!-- https://codemyui.com/bay-window-style-image-slider-with-scroll-effect/ -->
         <section id="promotion" class="col-span-full">
           <h2 class="visually-hidden">Promotional Gallery</h2>
-          <!-- https://codemyui.com/bay-window-style-image-slider-with-scroll-effect/ -->
+
           <h3>Promotion Gallery</h3>
-          <p>
-            Rotate the speaker and hover over each icon to explore every detail.
-          </p>
-          <div class="stage">
-            <div class="container">
-              <div class="ring">
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-              </div>
-            </div>
+          <p>Explore our promotional gallery.</p>
+
+          <div class="carousel">
+            <ol class="carousel__viewport">
+              <li id="slide1" class="carousel__slide">
+                <img
+                  src="images/promotion_gallery/cj_camping_night.png"
+                  alt="Camping night promotion"
+                />
+                <a
+                  href="#slide7"
+                  class="carousel__prev"
+                  aria-label="Previous image"
+                  >‹</a
+                >
+                <a href="#slide2" class="carousel__next" aria-label="Next image"
+                  >›</a
+                >
+              </li>
+
+              <li id="slide2" class="carousel__slide">
+                <img
+                  src="images/promotion_gallery/cj_canadafall.png"
+                  alt="Canada fall promotion"
+                />
+                <a
+                  href="#slide1"
+                  class="carousel__prev"
+                  aria-label="Previous image"
+                  >‹</a
+                >
+                <a href="#slide3" class="carousel__next" aria-label="Next image"
+                  >›</a
+                >
+              </li>
+
+              <li id="slide3" class="carousel__slide">
+                <img
+                  src="images/promotion_gallery/cj_cyberpunk.png"
+                  alt="Cyberpunk promotion"
+                />
+                <a
+                  href="#slide2"
+                  class="carousel__prev"
+                  aria-label="Previous image"
+                  >‹</a
+                >
+                <a href="#slide4" class="carousel__next" aria-label="Next image"
+                  >›</a
+                >
+              </li>
+
+              <li id="slide4" class="carousel__slide">
+                <img
+                  src="images/promotion_gallery/cj_futurism.png"
+                  alt="Futurism promotion"
+                />
+                <a
+                  href="#slide3"
+                  class="carousel__prev"
+                  aria-label="Previous image"
+                  >‹</a
+                >
+                <a href="#slide5" class="carousel__next" aria-label="Next image"
+                  >›</a
+                >
+              </li>
+
+              <li id="slide5" class="carousel__slide">
+                <img
+                  src="images/promotion_gallery/cj_retroposter.png"
+                  alt="Retro poster promotion"
+                />
+                <a
+                  href="#slide4"
+                  class="carousel__prev"
+                  aria-label="Previous image"
+                  >‹</a
+                >
+                <a href="#slide6" class="carousel__next" aria-label="Next image"
+                  >›</a
+                >
+              </li>
+
+              <li id="slide6" class="carousel__slide">
+                <img
+                  src="images/promotion_gallery/cj_space_web.png"
+                  alt="Space promotion"
+                />
+                <a
+                  href="#slide5"
+                  class="carousel__prev"
+                  aria-label="Previous image"
+                  >‹</a
+                >
+                <a href="#slide7" class="carousel__next" aria-label="Next image"
+                  >›</a
+                >
+              </li>
+
+              <li id="slide7" class="carousel__slide">
+                <img
+                  src="images/promotion_gallery/cj_wireframe_insta.png"
+                  alt="Wireframe promotion"
+                />
+                <a
+                  href="#slide6"
+                  class="carousel__prev"
+                  aria-label="Previous image"
+                  >‹</a
+                >
+                <a href="#slide1" class="carousel__next" aria-label="Next image"
+                  >›</a
+                >
+              </li>
+            </ol>
+
+            <nav class="carousel__navigation" aria-label="Gallery navigation">
+              <a href="#slide1" aria-label="Go to image 1"></a>
+              <a href="#slide2" aria-label="Go to image 2"></a>
+              <a href="#slide3" aria-label="Go to image 3"></a>
+              <a href="#slide4" aria-label="Go to image 4"></a>
+              <a href="#slide5" aria-label="Go to image 5"></a>
+              <a href="#slide6" aria-label="Go to image 6"></a>
+              <a href="#slide7" aria-label="Go to image 7"></a>
+            </nav>
           </div>
         </section>
       </div>
@@ -157,8 +269,8 @@
       </p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
     <script
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"
