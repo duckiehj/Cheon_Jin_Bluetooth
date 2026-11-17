@@ -1,1 +1,78 @@
 @use "../abstracts/" as *;
+
+#promotion {
+  .stage {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 360px;
+    padding: 0 10%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #000;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 10%;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .container,
+  .ring {
+    display: contents;
+  }
+
+  .img {
+    flex: 0 0 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    .stage {
+      display: block;
+      position: relative;
+      height: 550px;
+      padding: 0;
+      overflow: hidden;
+      scroll-snap-type: none;
+      user-select: none;
+      cursor: grab;
+      touch-action: none;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+
+    .container {
+      display: block;
+      position: absolute;
+      width: 300px;
+      height: 400px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      perspective: 2000px;
+    }
+
+    .ring,
+    .img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+    }
+
+    .img {
+      backface-visibility: hidden;
+    }
+  }
+}

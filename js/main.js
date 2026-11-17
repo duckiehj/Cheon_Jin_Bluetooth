@@ -158,4 +158,120 @@
   }
 
   loadInfo();
+
+  //
+  //
+  // Promotion Gallery
+  const stage = document.querySelector("#promotion .stage");
+  const ring = document.querySelector("#promotion .ring");
+  const imgs = document.querySelectorAll("#promotion .img");
+
+  const imgURLs = [
+    "images/promotion_gallery/cj_camping_night.png",
+    "images/promotion_gallery/cj_canadafall.png",
+    "images/promotion_gallery/cj_cyberpunk.png",
+    "images/promotion_gallery/cj_futurism.png",
+    "images/promotion_gallery/cj_retroposter.png",
+    "images/promotion_gallery/cj_space_web.png",
+    "images/promotion_gallery/cj_wireframe_insta.png",
+  ];
+
+  imgs.forEach((img, i) => {
+    img.style.backgroundImage = `url("${imgURLs[i]}")`;
+  });
+
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 768px)", () => {
+    const angle = 360 / imgs.length;
+    const radius = 350;
+
+    imgs.forEach((img, i) => {
+      gsap.set(img, {
+        rotateY: -angle * i,
+        transformOrigin: `50% 50% ${radius}px`,
+        z: -radius,
+      });
+    });
+
+    let rotation = 180;
+    let isDragging = false;
+    let startX = 0;
+
+    gsap.set(ring, { rotationY: rotation });
+
+    gsap.from(imgs, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: "power2.out",
+    });
+
+    function hoverIn(e) {
+      const current = e.currentTarget;
+
+      gsap.to(imgs, {
+        opacity: (i, img) => (img === current ? 1 : 0.5),
+        duration: 0.2,
+        overwrite: true,
+      });
+    }
+
+    function hoverOut() {
+      gsap.to(imgs, {
+        opacity: 1,
+        duration: 0.2,
+        overwrite: true,
+      });
+    }
+
+    imgs.forEach((img) => {
+      img.addEventListener("mouseenter", hoverIn);
+      img.addEventListener("mouseleave", hoverOut);
+    });
+
+    function dragStart(e) {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+
+      isDragging = true;
+      startX = e.clientX;
+      stage.setPointerCapture(e.pointerId);
+    }
+
+    function drag(e) {
+      if (!isDragging) return;
+
+      rotation += (e.clientX - startX) * 0.5;
+      gsap.set(ring, { rotationY: rotation });
+
+      startX = e.clientX;
+    }
+
+    function dragEnd() {
+      isDragging = false;
+    }
+
+    stage.addEventListener("pointerdown", dragStart);
+    stage.addEventListener("pointermove", drag);
+    stage.addEventListener("pointerup", dragEnd);
+    stage.addEventListener("pointercancel", dragEnd);
+    stage.addEventListener("lostpointercapture", dragEnd);
+
+    return () => {
+      stage.removeEventListener("pointerdown", dragStart);
+      stage.removeEventListener("pointermove", drag);
+      stage.removeEventListener("pointerup", dragEnd);
+      stage.removeEventListener("pointercancel", dragEnd);
+      stage.removeEventListener("lostpointercapture", dragEnd);
+
+      imgs.forEach((img) => {
+        img.removeEventListener("mouseenter", hoverIn);
+        img.removeEventListener("mouseleave", hoverOut);
+      });
+
+      gsap.killTweensOf(imgs);
+      imgs.forEach((img) => img.style.removeProperty("opacity"));
+    };
+  });
 })();
