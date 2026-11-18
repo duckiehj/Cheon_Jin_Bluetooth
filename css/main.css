@@ -1,8 +1,8 @@
 body {
   font-family: "Comfortaa", sans-serif;
   font-weight: 400;
-  background-color: #f7f5f0;
-  color: #333333;
+  background-color: #061113;
+  color: #f4f7f7;
 }
 
 h1,
@@ -22,7 +22,7 @@ h3 {
 }
 
 p {
-  color: #333333;
+  color: #f4f7f7;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -57,7 +57,7 @@ model-viewer {
   width: 100%;
   max-width: 1200px;
   height: 400px;
-  background-color: #f7f5f0;
+  background-color: #061113;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -114,7 +114,7 @@ model-viewer {
   border: 2px solid #1a535c;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  color: #333333;
+  color: #f4f7f7;
   display: block;
   font-family: "Comfortaa", sans-serif;
   font-size: 15px;
@@ -129,7 +129,7 @@ model-viewer {
   text-align: left;
 }
 .HotspotAnnotation p {
-  color: #333333;
+  color: #f4f7f7;
   line-height: 20px;
 }
 .HotspotAnnotation h2 {
@@ -216,7 +216,52 @@ model-viewer::part(default-progress-mask) {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: radial-gradient(circle, rgba(46, 196, 182, 0.25) 0%, #f7f5f0 70%);
+  background-color: #061113;
+}
+
+.hero-retro-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  perspective: 400px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.retro-stars {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(2px 2px at 40px 60px, #fff, transparent), radial-gradient(1.5px 1.5px at 120px 150px, #2ec4b6, transparent), radial-gradient(2px 2px at 220px 40px, #fff, transparent), radial-gradient(1.5px 1.5px at 300px 180px, #f55d00, transparent), radial-gradient(1px 1px at 80px 210px, #fff, transparent);
+  background-size: 350px 250px;
+  opacity: 0.65;
+}
+
+.retro-grid-top,
+.retro-grid-bottom {
+  position: absolute;
+  left: -50%;
+  width: 200%;
+  height: 55%;
+  background-image: linear-gradient(to right, rgba(46, 196, 182, 0.35) 1px, transparent 1px), linear-gradient(to bottom, rgba(46, 196, 182, 0.35) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.retro-grid-top {
+  top: 0;
+  transform-origin: bottom center;
+  transform: rotateX(-75deg);
+}
+
+.retro-grid-bottom {
+  bottom: 0;
+  transform-origin: top center;
+  transform: rotateX(75deg);
+}
+
+.retro-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 35%, #061113 48%, #061113 52%, transparent 65%), radial-gradient(ellipse at center, transparent 20%, #061113 85%);
 }
 
 .hero-content {
@@ -226,6 +271,8 @@ model-viewer::part(default-progress-mask) {
 }
 
 .canvas-container {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,20 +286,22 @@ model-viewer::part(default-progress-mask) {
   width: auto;
   height: auto;
   display: block;
-  z-index: 1;
 }
 
 .hero-title {
   text-align: center;
-  color: #333333;
+  color: #f4f7f7;
   margin-bottom: 0;
 }
 .hero-title h2 {
   font-size: 28px;
   margin-bottom: 8px;
+  color: #f4f7f7;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
 }
 .hero-title p {
   font-size: 16px;
+  color: #2ec4b6;
 }
 
 #explode-view,
@@ -278,7 +327,7 @@ header {
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #f7f5f0;
+  background-color: #061113;
   border-bottom: 2px solid #1a535c;
 }
 header .grid-con {
@@ -378,7 +427,7 @@ header .grid-con {
   margin: 0;
   padding: 0 20px;
   list-style: none;
-  background-color: #f7f5f0;
+  background-color: #061113;
   font-family: "Comfortaa", sans-serif;
   font-size: 16px;
   text-align: left;
@@ -626,7 +675,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 #model-section {
-  background-color: #eef3f2;
+  background-color: #0b1c20;
 }
 
 .retro-frame {
