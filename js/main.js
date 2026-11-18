@@ -1,17 +1,18 @@
 (() => {
   // I was so confused by all the JavaScript so I added comments to each function to help myself.
 
-  // burger menu Section
-  // console.log("JS is connected");
+  // Burger menu section
 
   const menu = document.querySelector("#menu-toggle");
   const links = document.querySelectorAll("#burger-menu a");
 
-  links.forEach(function (link) {
-    link.onclick = function () {
-      menu.checked = false;
-    };
-  });
+  function closeMenu() {
+    menu.checked = false;
+  }
+
+  for (const link of links) {
+    link.addEventListener("click", closeMenu);
+  }
 
   //
   //
@@ -121,7 +122,7 @@
 
   function loadInfo() {
     infoBoxes.forEach((infoBox, index) => {
-      let selected = document.querySelector(`#hotspot-${index + 1}`);
+      const selected = document.querySelector(`#hotspot-${index + 1}`);
 
       const titleElement = document.createElement("h2");
       titleElement.textContent = infoBox.title;
