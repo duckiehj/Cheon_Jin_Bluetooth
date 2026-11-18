@@ -1,5 +1,5 @@
 body {
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Jost", "Montserrat", sans-serif;
   font-weight: 400;
   background-color: #061113;
   color: #f4f7f7;
@@ -116,7 +116,7 @@ model-viewer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   color: #f4f7f7;
   display: block;
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Jost", "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 700;
   left: calc(100% + 1em);
@@ -427,8 +427,8 @@ header .grid-con {
   margin: 0;
   padding: 0 20px;
   list-style: none;
-  background-color: #061113;
-  font-family: "Comfortaa", sans-serif;
+  background-color: #f7f5f0;
+  font-family: "Jost", "Montserrat", sans-serif;
   font-size: 16px;
   text-align: left;
   max-height: 0;
