@@ -43,7 +43,7 @@
     scrollTrigger: {
       trigger: "#hero-vertical",
       pin: true,
-      start: "top top",
+      start: "top 70px",
       end: "+=3000",
       scrub: true,
     },
@@ -55,7 +55,7 @@
     y: -30,
     scrollTrigger: {
       trigger: "#hero-vertical",
-      start: "top top",
+      start: "top 70px",
       end: "+=600",
       scrub: true,
     },

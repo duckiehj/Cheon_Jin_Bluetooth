@@ -38,7 +38,7 @@ p {
     font-size: 13px;
     font-weight: 700;
     color: $secondary-color;
-    margin-bottom: 8px;
+    margin-bottom: 0;
   }
 }
 
@@ -57,5 +57,14 @@ p {
 
   .section-header {
     margin-bottom: 45px;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .section-tag {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
   }
 }
