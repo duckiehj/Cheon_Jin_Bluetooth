@@ -25,7 +25,7 @@
     right: -2px;
     width: 4px;
     height: 100%;
-    background-color: $secondary-color;
+    background-color: $bg-sub-color;
   }
 }
 
@@ -59,4 +59,36 @@ input[type="range"]::-moz-range-thumb {
   background-size: contain;
   border: none;
   cursor: pointer;
+}
+
+#image-revealer {
+  .section-header {
+    margin-bottom: 25px;
+
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      color: $accent-color;
+    }
+  }
+
+  .revealer-frame {
+    box-sizing: border-box;
+    width: 100%;
+    justify-self: center;
+    padding: 8px;
+    background-color: $bg-color;
+    border: 1px solid $accent-color;
+    border-radius: 14px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #image-revealer .revealer-frame {
+    width: 100%;
+    max-width: 720px;
+  }
 }
