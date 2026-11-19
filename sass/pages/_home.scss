@@ -6,26 +6,10 @@
   padding: 60px 0;
 }
 
-#model-section {
-  background-color: $bg-sub-color;
-}
-
-.retro-frame {
-  background-color: #fff;
-  border: 2px solid $primary-color;
-  border-radius: 16px;
-  padding: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
 @media screen and (min-width: 768px) {
   #image-revealer,
   #model-section,
   #promotion {
     padding: 100px 0;
-  }
-
-  .retro-frame {
-    padding: 20px;
   }
 }
