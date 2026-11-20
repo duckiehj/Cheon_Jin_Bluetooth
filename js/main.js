@@ -121,10 +121,10 @@
   ];
 
   function loadInfo() {
-    infoBoxes.forEach((infoBox, index) => {
+    infoBoxes.forEach(function createInfoBox(infoBox, index) {
       const selected = document.querySelector(`#hotspot-${index + 1}`);
 
-      const titleElement = document.createElement("h2");
+      const titleElement = document.createElement("h3");
       titleElement.textContent = infoBox.title;
 
       const textElement = document.createElement("p");
@@ -132,6 +132,7 @@
 
       const imageElement = document.createElement("img");
       imageElement.src = infoBox.image;
+      imageElement.alt = infoBox.title;
 
       selected.appendChild(imageElement);
       selected.appendChild(titleElement);
@@ -144,7 +145,7 @@
       mobileImg.src = infoBox.image;
       mobileImg.alt = infoBox.title;
 
-      const mobileTitle = document.createElement("h2");
+      const mobileTitle = document.createElement("h3");
       mobileTitle.textContent = infoBox.title;
 
       const mobileText = document.createElement("p");

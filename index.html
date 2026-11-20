@@ -23,7 +23,11 @@
           <a href="#hero-vertical" class="nav-logo">
             <img src="images/discos-logo.svg" alt="discos logo" />
           </a>
-          <input type="checkbox" id="menu-toggle" />
+          <input
+            type="checkbox"
+            id="menu-toggle"
+            aria-label="Navigation menu"
+          />
           <label for="menu-toggle" class="burger-icon">
             <span class="burger-lines"></span>
           </label>
@@ -55,7 +59,11 @@
           </div>
         </div>
         <div class="canvas-container">
-          <canvas id="explode-view"></canvas>
+          <canvas
+            id="explode-view"
+            role="img"
+            aria-label="Scroll animation showing the bluetooth speaker's internal components"
+          ></canvas>
         </div>
       </section>
       <!-- https://codefronts.com/motion/css-background-animations/ -->
@@ -82,6 +90,7 @@
                 step=".2"
                 value="50"
                 id="slider"
+                aria-label="Compare day and night views"
               />
             </div>
           </div>

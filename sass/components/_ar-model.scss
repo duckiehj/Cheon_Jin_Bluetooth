@@ -40,6 +40,8 @@ model-viewer {
   max-width: 1200px;
   height: 400px;
   background-color: $bg-sub-color;
+  --progress-bar-height: 20px;
+  --progress-bar-color: #2ec4b6;
   background-image:
     radial-gradient(2px 2px at 40px 60px, $text-color, transparent),
     radial-gradient(1.5px 1.5px at 120px 150px, $accent-color, transparent),
@@ -86,8 +88,8 @@ model-viewer {
 }
 
 .Hotspot:focus {
-  border: none;
-  outline: none;
+  outline: 2px solid $accent-color;
+  outline-offset: 4px;
 }
 
 .Hotspot:hover {
@@ -131,7 +133,7 @@ model-viewer {
     font-weight: 400;
   }
 
-  h2 {
+  h3 {
     color: $accent-color;
     font-size: 18px;
     margin-bottom: 7px;
@@ -151,7 +153,8 @@ model-viewer {
   top: 0;
 }
 
-.Hotspot:hover .HotspotAnnotation {
+.Hotspot:hover .HotspotAnnotation,
+.Hotspot:focus .HotspotAnnotation {
   opacity: 1;
   visibility: visible;
 }
@@ -179,7 +182,7 @@ model-viewer {
     display: block;
   }
 
-  h2 {
+  h3 {
     font-size: 20px;
     margin-bottom: 8px;
     color: $accent-color;
@@ -191,15 +194,6 @@ model-viewer {
     margin: 0;
     color: $text-color;
   }
-}
-
-model-viewer::part(default-progress-bar) {
-  height: 20px;
-  background-color: $accent-color;
-}
-
-model-viewer::part(default-progress-mask) {
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
