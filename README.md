@@ -1,4 +1,6 @@
-# Jin Cheon Bluetooth Speaker Project
+# Jin Cheon Bluetooth Speaker Project 🛸
+
+![Bluetooth Speaker Project](images/readme_banner.png)
 
 This repo contains the submission for the Bluetooth Speaker Project by Jin Cheon. The project focuses on building a responsive promotional website for a retro futurism lamp & bluetooth speaker designed by Jin Cheon.
 
